@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var cabecera_factura_1 = require("./cabecera_factura");
+var factura_1 = require("./factura");
+var cliente_1 = require("./cliente");
+var empresa_1 = require("./empresa");
+var cliente = new cliente_1.Cliente("Juan Pueblo", "1311311310001", "Manta", "0994717772");
+var empresa = new empresa_1.Empresa("Mi Empresa", "1311311310001", "Manta", "0994717772");
+var cabecera_factura = new cabecera_factura_1.CabeceraFactura(new Date(), cliente, empresa);
+var factura = new factura_1.Factura(cabecera_factura);
+console.log(factura.devolverDatos());
+console.log("Total de esta factura:");
+console.log(factura.calcularTotal());
