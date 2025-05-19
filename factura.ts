@@ -3,7 +3,9 @@ import { DetalleFactura } from "./detalle_factura";
 import { Producto } from "./producto";
 
 export class Factura{
+    //Agregación
     cabeceraFactura:CabeceraFactura;
+    //Composición
     detalleFactura:DetalleFactura[] = [];
 
     constructor(cabeceraFactura:CabeceraFactura){
