@@ -11,10 +11,12 @@ export class Cliente{
         this.telefono = telefono;
     }
 
-    imprimirCliente(): void{
-        console.log("Nombre: " + this.nombre);
-        console.log("RUC: " + this.ruc);
-        console.log("Direccion: " + this.direccion);
-        console.log("Telefono: " + this.telefono);
+    retornarDatos(): string{
+       
+        return "Nombre: " + this.nombre + 
+               " RUC: " + this.ruc + 
+               " Direccion: " + this.direccion +
+               " Telefono: " + this.telefono;
     }
+    
 }

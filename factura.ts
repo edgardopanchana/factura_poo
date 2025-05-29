@@ -3,27 +3,14 @@ import { DetalleFactura } from "./detalle_factura";
 import { Producto } from "./producto";
 
 export class Factura{
-    //Agregación
+    
     cabeceraFactura:CabeceraFactura;
-    //Composición
     detalleFactura:DetalleFactura[] = [];
 
-    constructor(cabeceraFactura:CabeceraFactura){
+    constructor(cabeceraFactura:CabeceraFactura, detalleFactura:DetalleFactura[] = []){
         this.cabeceraFactura = cabeceraFactura;
-        this.llenarDetalleFactura();
+        this.detalleFactura = detalleFactura;
     }
-
-    llenarDetalleFactura():void{
-        const producto1 = new Producto("arroz", 2);
-        this.detalleFactura.push(new DetalleFactura(producto1, 5));
-        const producto2 = new Producto("pollo", 1);
-        this.detalleFactura.push(new DetalleFactura(producto2, 3));
-        const producto3 = new Producto("carne", 3);
-        this.detalleFactura.push(new DetalleFactura(producto3, 2));
-        const producto4 = new Producto("pescado", 4);
-        this.detalleFactura.push(new DetalleFactura(producto4, 1));
-    }
-       
        
 
     calcularTotal():number{
